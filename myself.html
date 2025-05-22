@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | My Personal Blog</title>
+
+<style>
+/* Base Reset & Smooth UX */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+  font-family: 'Georgia', serif;
+  background-image: url("https://i.pinimg.com/736x/bd/60/13/bd601389f4c16d0a1d6fda6cc9f4a5b6.jpg");
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  background-size:cover;
+  background-position: center;
+
+}
+
+/* Header */
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  color: #000000;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Navigation Bar */
+nav {
+  background: #588971;
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  margin: 0 25px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+nav a:hover {
+  background-image: url("https://i.pinimg.com/736x/4b/6a/cf/4b6acfd5e7cdb7647be6593ee9b7071c.jpg");
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 100px;
+}
+
+/* Main Content */
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+section h3 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+
+/* Footer */
+footer {
+  background: #588971;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+.audio-control {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .toggle-btn {
+    background-color: #588971;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .toggle-btn:hover {
+    background-color: #71a58b;
+    transform: scale(1.05);
+}
+
+</style>
+
+</head>
+
+<body>
+ <audio id="clickSound" src="audio.html\click.mp3" preload="auto"></audio>
+<script>
+  const clickSound = document.getElementById('clickSound');
+
+  document.addEventListener('click', () => {
+    // Rewind to start in case it's still playing
+    clickSound.currentTime = 0;
+    clickSound.play();
+  });
+</script>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="myself.html">Myself</a>
+  <a href="education.html">Education</a>
+  <a href="family.html">Family</a>
+</nav>
+
+<main>
+
+  <section>
+
+<h3>~ Myself ~</h3>
+
+<div class="audio-control">
+  <button class="toggle-btn" id="toggleAudioBtn">▶ Play</button>
+
+  <audio id="song">
+    <source src="audio.html\SZA - Saturn.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<script>
+  const song = document.getElementById("song");
+  const toggleBtn = document.getElementById("toggleAudioBtn");
+
+  toggleBtn.addEventListener("click", function () {
+    if (song.paused) {
+      song.play();
+      toggleBtn.textContent = "⏸ Pause";
+    } else {
+      song.pause();
+      toggleBtn.textContent = "▶ Play";
+    }
+  });
+</script>
+
+
+<p>
+<img src="image.html\muziumdate.jpg" alt="Muzium date" style="float:left;width: 30%;height: 20%;margin: 20px;border-radius: 10px; border: 3px solid white;">
+<br>
+
+<p><b><u>ABOUT ME:</u></b></p>
+
+<br>
+<p> Hi, I’m Nur 'Ainul Barriyatullah, a final-year survivor *EHEM* what I meant is student at Universiti Teknologi MARA, majoring in Information Management. Based in the peaceful yet very hot land of Merbok, Kedah. I’ve spent the past few years mastering the fine art of balancing assignments, procrastination, and way too many naps.</p>
+
+<br>
+
+<p> Currently on a very serious quest to find my soul and maybe some iced latte along the way, I'm also lowkey wondering what comes after graduation… but we’ll cross that bridge when we’re forced to. For now, I’m just trying to pass my final year, enjoy the chaos, and keep my group assignments from turning into crime documentaries.</p>
+
+<br>
+
+<p> ps: lets see if i pass this semester or i pass this life.</p>
+
+<img src="https://media0.giphy.com/media/10a8AOSeP6Rqfu/200w.gif?cid=6c09b952uh702704sq33eza5f4ndzs4sygot2b9hulrzvgwp&ep=v1_stickers_search&rid=200w.gif&ct=s" alt="hello kitty" style="width:60px;height:60px;">
+
+<br>
+
+<p> Outside of academic survival mode, I’m a full-time fiction addict. My watchlists are stacked with horror, thriller, fantasy, crime, gore, mystery, and dark comedy ... the bloodier or weirder, the better. Novels and films are my portals to alternate realities, and I live for plot twists that make you question everything you thought you knew. </p>
+
+<br>
+
+<p> When I’m not lost in a fictional world, I’m scrolling through social media, napping like a professional, or staring at the wall in deep existential silence as one does.</p>
+
+<img src="https://media.tenor.com/i8Mus4hXSQEAAAAj/ghost-cute.gif" alt="ghost" style="width:150px;height:150px;">
+
+<br>
+
+<img src="image.html\enol tgh malam.jpg" alt="enol malam" style="float:right;width: 30%;height: 20%;margin-left: 20px;border-radius: 10px; border: 3px solid white;">
+
+<br>
+
+<p><b><u>MY FAVORITE THINGS THAT NO ONE ASKED:</u></b>
+<br>
+<br>
+<b>🍛 Favorite food:</b> Daging masak merah. It's spicy, sweet, and everything good in life.
+<br>
+<br>
+<b>🫖 Favorite drink obsession:</b> Oolong jasmine milk tea, it tastes like calm chaos, and I respect that.
+<br>
+<br>
+<b>📖 Favorite manhwa:</b> Omniscient Reader’s Viewpoint, Kim Dokja is my baby girl. No further questions. I mean I have a lot of favorite manhwa but it will not fit...</p>
+<br>
+<br>
+<p><b>📔Favorite line in manhwa:</b>"This man. Lock him up." -Jung Heewon</p>
+<br>
+<img src="https://i.redd.it/c17rj77rxqje1.gif" alt="dokja" style="width:120px;height:120px;">
+
+<br>
+
+<img src="image.html\running.jpg" alt="lari weyh" style="float:left;width: 30%;height: 20%;margin: 20px;border-radius: 10px; border: 3px solid white;">
+
+<br>
+
+<p><b><u>RANDOM FACTS ABOUT ME (aka things no one asked for.):</u></b> 
+<br>
+<br>
+1. I once stayed awake for 4 days straight (don’t ask why), and on the fifth day, I blacked out during science class.  </p>
+<br>
+<br>
+2. My device has a name and it's Skylar. Yes, I name my electronics. No, I’m not taking questions.
+<br>
+<br>
+3. I watch horror movies because I find “normal” movies painfully boring. Give me demons, not drama.
+<br>
+<br>
+4. The very first horror film I ever watched was The Conjuring in 2013 and I’ve been hooked on spooky ever since.
+<br>
+<br>
+5. I’m still friends with my childhood bestie, we met when we were babies (thanks, parents. You guys did a great job letting us devils met).
+<br>
+
+<img src="https://i.gifer.com/XOsX.gif" alt="duckk" style="width:60px;height:60px;">
+
+
+</p>  
+
+  </section>
+
+</main>
+
+
+<footer>
+  &copy; 2025 Ainul. Connected through the Water.
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | My Personal Blog</title>
+
+<style>
+/* Base Reset & Smooth UX */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+  font-family: 'Georgia', serif;
+  background-image: url("https://i.pinimg.com/736x/0d/fd/b0/0dfdb00316ac495a2ad9027f0cf48c11.jpg");
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  background-size:cover;
+  background-position: center;
+
+}
+
+/* Header */
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  color: #000000;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Navigation Bar */
+nav {
+  background: #588971;
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  margin: 0 25px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+nav a:hover {
+  background-image: url("https://i.pinimg.com/736x/4b/6a/cf/4b6acfd5e7cdb7647be6593ee9b7071c.jpg");
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 100px;
+}
+
+/* Main Content */
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+section h3 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+
+/* Footer */
+footer {
+  background: #588971;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+.audio-control {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .toggle-btn {
+    background-color: #588971;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .toggle-btn:hover {
+    background-color: #71a58b;
+    transform: scale(1.05);
+}
+
+/* Slideshow */
+.slideshow-container {
+  max-width: 1000px;
+  height: 600px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mySlides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+
+.mySlides.show {
+  opacity: 1;
+  z-index: 1;
+}
+
+  img {
+      border-radius: 10px;
+      border: 3px solid white;
+      margin: 20px;
+      cursor: pointer;
+    }
+    #raya {
+      float: left;
+      width: 400px;
+      height: 300px;
+    }
+    #lya {
+      float: right;
+      width: 340px;
+      height: 300px;
+    }
+
+</style>
+
+
+</head>
+
+
+<body>
+
+ <audio id="clickSound" src="audio.html\click.mp3" preload="auto"></audio>
+<script>
+  const clickSound = document.getElementById('clickSound');
+
+  document.addEventListener('click', () => {
+    // Rewind to start in case it's still playing
+    clickSound.currentTime = 0;
+    clickSound.play();
+  });
+</script>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="myself.html">Myself</a>
+  <a href="education.html">Education</a>
+  <a href="family.html">Family</a>
+</nav>
+
+
+
+<main>
+	<div class="container">
+ 		 <section>
+			<marquee>⋆. 𐙚˚࿔ Oel ngati kameie 𝜗𝜚˚⋆</marquee>
+  			<h3>~Family, But Make It a Sitcom ~</h3>
+    			
+ <p> Mom is our overachiever in residence...juggling work, life, and oven timers like she’s training for the Olympics. She bakes like she’s trying to bribe the universe into giving her a break. Spoiler alert, it hasn't worked yet.</p>
+<br>
+<p>Dad (stepdad, but legally trapped now) is the patient, kind-hearted guy who wandered into this emotional escape room and decided to stay. We still don’t know why. Maybe he lost a bet?</p>
+<br>
+We're not perfect but perfection is for robots.
+ </p>
+
+    <div class="slideshow-container">
+  <img class="mySlides" src="image.html\myfam.jpg" alt="Slide 1">
+     <img class="mySlides" src="image.html\photo_2025-05-21_21-14-47.jpg" alt="Slide 2">
+     <img class="mySlides" src="image.html\wehehe.jpg" alt="Slide 3">
+
+    </div>
+
+
+</p>
+
+  <script>
+  let index = 0;
+  const slides = document.getElementsByClassName("mySlides");
+
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("show");
+    }
+
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("show");
+
+    setTimeout(showSlides, 3000); // Switch every 3 seconds
+  }
+
+  // Initially show the first slide
+  if (slides.length > 0) {
+    slides[0].classList.add("show");
+    setTimeout(showSlides, 3000);
+  }
+</script>
+
+<br>
+<br>
+
+<p>
+<img id="raya" src="image.html\rayarayaraya.jpg" alt="rayaer">
+<audio id="audioRaya" src="audio.html\Twenty One Pilots - Doubt (demo).mp3"></audio>
+<br>
+
+<p><b>My Emotional Support Duo™</b></P>
+<br>
+
+<p> Ain (green baju kurung) has tolerated me since Form 1. Basically a saint or a glutton for punishment yet always “understanding”. If loyalty had a face, it would be hers. Probably side-eyeing me, but still.</p>
+<br>
+Shyuhada (black baju kurung) is kind… until she’s not. Loves spoiling me but sometimes she makes my blood pressure rise just for fun,  somehow she still ends up making me laugh five minutes later. She's annoying... but she’s my annoying.</p>
+<br>
+<p>Basically, they’re the chaos I chose to keep around. Lucky me. YAY!</p>
+
+<br>
+<br>
+<img id="lya" src="image.html/lyahadid.jpg" alt="lya"><br>
+<audio id="audioLya" src="audio.html\50 Cent - Baby By Me ft. Ne-Yo.mp3"></audio>
+<br>
+<br>
+<p><b>Alya & Me: Masters of Mayhem™</b></P>
+<br>
+
+<p> Meet Alya, my roommate since day one of semester 1. At first, I thought she was this annoyingly confident queen who could probably win an argument with a brick wall and look stunning doing it. But then she actually talked to me, and boom, instant upgrade: “This girl’s gonna be a ride-or-die friend.”</p>
+<br>
+Her laugh? Oh man, it’s basically a sonic boom. I swear, if laughter was a sport, she’d have gold medals . We’ve been born with built-in megaphones, so whispering is just not in our vocab. Sorry, neighbors, your walls are not thick enough..</p>
+<br>
+<p>We’re both a little… let’s say “uniquely wired.” Mental health warriors who’ve mastered the art of reading each other’s vibes, like telepathy but with chocolates and memes. If one of us is having a “don’t talk to me” day, the other knows and sneaks in snacks and bad jokes to fix it.</p>
+
+
+</p>
+
+<script>
+  const rayaImg = document.getElementById('raya');
+  const lyaImg = document.getElementById('lya');
+  const audioRaya = document.getElementById('audioRaya');
+  const audioLya = document.getElementById('audioLya');
+
+  function togglePlayPause(audioToPlay, audioToPause) {
+    if (audioToPlay.paused) {
+      audioToPause.pause();
+      audioToPause.currentTime = 0;
+      audioToPlay.play();
+    } else {
+      audioToPlay.pause();
+    }
+  }
+
+  rayaImg.addEventListener('click', () => {
+    togglePlayPause(audioRaya, audioLya);
+  });
+
+  lyaImg.addEventListener('click', () => {
+    togglePlayPause(audioLya, audioRaya);
+  });
+</script>
+
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Ainul. Connected through the Water.
+</footer>
+
+
+</body>
+</html>
